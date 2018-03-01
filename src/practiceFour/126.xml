@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite">
+	<parameter name="data" value="\data\126\data_126.properties"/>
+	<parameter name="locators" value="\data\126\locators_126.properties"/>
+	<test name="Practice1" preserve-order="true">
+		<classes>
+			<class name="practiceFour.Practice2OnTestNG">
+				<methods>
+					<include name = "accessMail"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> <!-- Default suite -->

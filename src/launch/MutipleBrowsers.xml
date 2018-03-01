@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite">
+  <test verbose="2" name="Default test">
+  <parameter name="Browser" value="ie"/>
+  <groups>
+  <define name="browser"/>
+  <define name="method1"/>
+  <define name="method2"/>
+  <define name="method3"/>
+  <define name="method4"/>
+  
+  <define name="ie">
+  <include name='method1'/>
+   <include name='method2'/>
+  </define>
+  
+    <define name="FF">
+  <include name='method3'/>
+   <include name='method4'/>
+
+  </define>
+  
+    <define name="chrome">
+  <include name='method1'/>
+   <include name='method3'/>
+  </define>
+  
+  <run>
+  <include name='browser'/>
+  <include name='ie'/>
+  </run>
+  </groups>
+    <classes>
+      <class name="launch.MutipleBrowsers"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
